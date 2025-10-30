@@ -22,3 +22,6 @@ Pages/Sections my project needs:
 (Section) Newborn & Infant (0 – 1 year)
 (Section) Toddler (1 – 3 years)
 (Section) Preschool (3 – 5 years)
+
+Oct 29. Referring to what we learned in the previous class, I used JavaScript to display information about the 'Newborn & Infant' routine. I created an array of data - sleep, play, feeding and hygiene and used a loop to generate HTML elements automatically. This allows the information to automatically appear on the page instead of me manually typing it out. 
+Understanding how to connect my script to my html took a few trials. It was also hard for me to conceptualize what I was coding as I was creating the script. 
