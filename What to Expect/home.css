@@ -1,3 +1,16 @@
+/* NAVIGATION */
+.nav {
+  display: none;
+  position: absolute;
+  top: 70px;
+  right: 20px;
+  background: #ffffff;
+  border: 2px solid #c4c4c4;
+  padding: 20px;
+  border-radius: 8px;
+  z-index: 1000;
+}
+
 /* page layout */
 body {
   margin: 0;

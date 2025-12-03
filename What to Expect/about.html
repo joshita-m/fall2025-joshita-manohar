@@ -4,13 +4,25 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About • What to Expect, When You’ve Expected</title>
+
+    <!-- GOOGLE FONT (same as all other pages) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Patrick+Hand+SC&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="home.css" />
+    <link rel="stylesheet" href="about.css" />
   </head>
 
   <body>
+    <!-- SAME HEADER AS milestone + routine -->
     <header>
       <div class="menu-bar">
         <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
-        <h1 class="site-title">What to Expect, When You’ve Expected</h1>
       </div>
 
       <nav class="nav">
@@ -23,10 +35,40 @@
       </nav>
     </header>
 
-    <!-- this is the main section -->
     <main>
-      <h2>About</h2>
-      <p>This page explains the purpose of the project and who it helps.</p>
+      <div class="about-wrapper">
+
+        <!-- PAGE TITLE -->
+        <h1 class="about-title">
+          <span class="title-highlight">ABOUT</span> THE PROFESSIONALS
+        </h1>
+
+        <!-- IMAGE + INFO -->
+        <section class="about-main">
+          <div class="about-image">
+            &gt; IMAGE &lt;
+          </div>
+
+          <div class="about-info">
+            <p class="source-label">SOURCE OF INFORMATION:</p>
+            <p class="source-name">AMERICAN PEDIATRICS ASSOCIATION</p>
+          </div>
+        </section>
+
+        <!-- TRUSTED BY -->
+        <section class="about-trusted">
+          <p class="trusted-label">TRUSTED BY:</p>
+
+          <div class="logo-row">
+            <div class="logo-circle">&gt; LOGO &lt;</div>
+            <div class="logo-circle">&gt; LOGO &lt;</div>
+            <div class="logo-circle">&gt; LOGO &lt;</div>
+          </div>
+        </section>
+      </div>
     </main>
+
+    <script src="script.js"></script>
   </body>
 </html>
+

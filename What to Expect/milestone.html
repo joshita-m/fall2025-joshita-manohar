@@ -3,30 +3,146 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About • What to Expect, When You’ve Expected</title>
+    <title>Developmental Milestones</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Patrick+Hand+SC&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- This MUST match your file name -->
+    <link rel="stylesheet" href="milestone.css" />
   </head>
 
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const toggle = document.querySelector(".menu-toggle");
+    const nav = document.querySelector(".nav");
+
+    toggle.addEventListener("click", () => {
+      nav.classList.toggle("open");
+    });
+  });
+</script>
+
   <body>
+    <!-- You can paste your real header/nav here later; keeping this simple for now -->
     <header>
-      <div class="menu-bar">
-        <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
-        <h1 class="site-title">What to Expect, When You’ve Expected</h1>
-      </div>
+  <div class="menu-bar">
+    <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+  </div>
 
-      <nav class="nav">
-        <ul>
-          <li><a href="home.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="milestone.html">Developmental Milestones</a></li>
-          <li><a href="routine.html">Routine Overview</a></li>
-        </ul>
-      </nav>
-    </header>
+  <nav class="nav">
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="milestone.html">Developmental Milestones</a></li>
+      <li><a href="routine.html">Routine Overview</a></li>
+    </ul>
+  </nav>
+</header>
 
-    <!-- this is the main section -->
     <main>
-      <h2>Developmental Milestones</h2>
-      <p>This page explains the milestones.</p>
+      <section class="milestone-graph">
+        <!-- Title block on the right -->
+        <div class="milestone-title">
+          <span>OVERVIEW OF</span>
+          <div class="title-highlight">DEVELOPMENTAL MILESTONES</div>
+        </div>
+
+        <!-- Timeline diagram -->
+        <svg
+          class="milestone-svg"
+          viewBox="0 0 1200 600"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <!-- Lines (left cluster) -->
+          <polyline points="80,260 180,200 260,120" class="line" />
+          <polyline points="80,260 180,340 120,500" class="line" />
+
+          <!-- Lines (right cluster) -->
+          <polyline points="320,420 520,300 760,220 980,260" class="line" />
+          <polyline points="760,220 680,360 880,520" class="line" />
+
+          <!-- Dots -->
+          <circle cx="80" cy="260" r="10" class="dot" />
+          <circle cx="260" cy="120" r="10" class="dot" />
+          <circle cx="180" cy="340" r="10" class="dot" />
+          <circle cx="120" cy="500" r="10" class="dot" />
+          <circle cx="320" cy="420" r="10" class="dot" />
+          <circle cx="520" cy="300" r="10" class="dot" />
+          <circle cx="760" cy="220" r="10" class="dot" />
+          <circle cx="980" cy="260" r="10" class="dot" />
+          <circle cx="680" cy="360" r="10" class="dot" />
+          <circle cx="880" cy="520" r="10" class="dot" />
+
+          <!-- INTERACTIVE LABEL GROUPS -->
+
+          <!-- 4 MONTHS (with highlight box) -->
+          <g class="month-group month-4">
+            <rect
+              x="205"
+              y="135"
+              width="130"
+              height="45"
+              rx="4"
+              class="month-highlight"
+            />
+            <text x="225" y="165" class="month-label">4 MONTHS</text>
+          </g>
+
+          <!-- BY 2 MONTHS -->
+          <g class="month-group month-2">
+            <text x="230" y="75" class="month-label small">BY 2 MONTHS</text>
+          </g>
+
+          <!-- 6 MONTHS -->
+          <g class="month-group month-6">
+            <text x="190" y="370" class="month-label">6 MONTHS</text>
+          </g>
+
+          <!-- 9 MONTHS -->
+          <g class="month-group month-9">
+            <text x="40" y="535" class="month-label">9 MONTHS</text>
+          </g>
+
+          <!-- 12 MONTHS -->
+          <g class="month-group month-12">
+            <text x="500" y="280" class="month-label">12 MONTHS</text>
+          </g>
+
+          <!-- 15 MONTHS -->
+          <g class="month-group month-15">
+            <text x="1010" y="255" class="month-label">15 MONTHS</text>
+          </g>
+
+          <!-- 18 MONTHS -->
+          <g class="month-group month-18">
+            <text x="700" y="350" class="month-label">18 MONTHS</text>
+          </g>
+
+          <!-- 2 YEARS -->
+          <g class="month-group month-24">
+            <text x="890" y="550" class="month-label">2 YEARS</text>
+          </g>
+        </svg>
+      </section>
     </main>
+
+    <!-- JS for click-to-highlight -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const groups = document.querySelectorAll(".month-group");
+        groups.forEach((group) => {
+          group.addEventListener("click", () => {
+            groups.forEach((g) => g.classList.remove("active"));
+            group.classList.add("active");
+          });
+        });
+      });
+    </script>
   </body>
 </html>

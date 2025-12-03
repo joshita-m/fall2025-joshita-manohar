@@ -3,14 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About • What to Expect, When You’ve Expected</title>
+    <title>Routine Overview • What to Expect, When You’ve Expected</title>
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Patrick+Hand+SC&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Page CSS -->
+    <link rel="stylesheet" href="routine.css" />
   </head>
 
   <body>
+    <!-- Same header / burger as milestone page -->
     <header>
       <div class="menu-bar">
         <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
-        <h1 class="site-title">What to Expect, When You’ve Expected</h1>
       </div>
 
       <nav class="nav">
@@ -23,19 +34,27 @@
       </nav>
     </header>
 
-    <!-- this is the main section -->
     <main>
-      <h2>Routine Overview</h2>
-      <p>This page explains the expected routine.</p>
+      <div class="routine-wrapper">
+        <!-- TITLE + HIGHLIGHT -->
+        <div class="routine-title">
+          <span>OVERVIEW OF YOUR CHILD’S</span>
+          <div class="title-highlight">ROUTINE</div>
+        </div>
+
+        <!-- GREY AGE BAR -->
+        <div class="age-bar">
+          <h2 class="age-label">NEWBORN &amp; INFANT (0 – 1 YEAR)</h2>
+        </div>
+
+        <!-- YELLOW AREA WHERE JS INJECTS CONTENT -->
+        <section id="dynamic-content" class="routine-table">
+          <div id="content-container"></div>
+        </section>
+      </div>
     </main>
 
-    <section id="dynamic-content">
-      <h2>Newborn & Infant (0–1 year)</h2>
-      <div id="content-container"></div>
-    </section>
-
-    <!-- here i have to add my java script. this is telling the computer to automatically show the data on my page without manual coding it in -->
+    <!-- Script (burger + dynamic content) -->
     <script src="script.js"></script>
-
   </body>
 </html>
