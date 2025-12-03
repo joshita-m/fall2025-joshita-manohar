@@ -27,3 +27,5 @@ Oct 29. Referring to what we learned in the previous class, I used JavaScript to
 Understanding how to connect my script to my html took a few trials. It was also hard for me to conceptualize what I was coding as I was creating the script. 
 
 Nov 12. Referring to last class, I css coded the design layout of the 'Home' page. I added shapes and animated the color to change when you hover over it. The animation is meant to indicate to the user what they are about to be re-nagivated to when they press the button/indicate which button they're about to press. I'm still trying to figure out how to animate the burger menu and reduce the page size. 
+
+Dec 2. Adding the CSS docs for all 4 main pages -- Home, About, Milestones & Routine. Added the burger menu. Made sure to add 'script' for the routine. Need to figure out how to add images for the 'About'
